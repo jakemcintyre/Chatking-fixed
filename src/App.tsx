@@ -1,30 +1,11 @@
-import React, { useState } from 'react';
-import Sidebar from './components/layout/Sidebar';
-import InboxView from './components/inbox/InboxView';
-import DashboardView from './components/dashboard/DashboardView';
+import React from 'react';
 
 function App() {
-  const [activePage, setActivePage] = useState('dashboard');
-
-  const renderPage = () => {
-    switch (activePage) {
-      case 'inbox':
-        return <InboxView />;
-      case 'dashboard':
-        return <DashboardView />;
-      default:
-        return <DashboardView />;
-    }
-  };
-
   return (
-  <div className="flex h-screen">
-    <Sidebar isOpen={true} activePage={activePage} setActivePage={setActivePage} />
-    <main className="flex-1 p-4 overflow-y-auto">
-      {renderPage()}
-    </main>
-  </div>
-);
+    <div className="h-screen flex items-center justify-center bg-gray-100">
+      <h1 className="text-3xl font-bold text-blue-900">Welcome to ChatKing</h1>
+    </div>
+  );
 }
 
 export default App;

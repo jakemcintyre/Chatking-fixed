@@ -1,28 +1,42 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import ContactsPage from './pages/Contacts';
+import React from 'react';
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Link,
+} from 'react-router-dom';
+
+function Dashboard() {
+  return <div className="p-4">Welcome to the Dashboard!</div>;
+}
+function Inbox() {
+  return <div className="p-4">Here’s your Inbox.</div>;
+}
+function Contacts() {
+  return <div className="p-4">Manage Contacts here.</div>;
+}
+// Add more pages as needed...
 
 function App() {
   return (
     <Router>
-      <div className="h-screen flex">
+      <div className="flex h-screen">
         {/* Sidebar */}
-        <aside className="w-64 bg-blue-900 text-white p-4">
-          <img src="/chatking-logo.png" alt="ChatKing Logo" className="w-10 h-auto mb-4" />
-          <div className="flex items-center space-x-2">
-            <span className="text-yellow-400 text-2xl">👑</span>
-            <h1 className="text-2xl font-bold tracking-tight">ChatKing</h1>
-          </div>
-          <nav className="flex flex-col space-y-2 mt-6">
-            <a href="/" className="hover:bg-blue-800 px-4 py-2">Dashboard</a>
-            <a href="/contacts" className="hover:bg-blue-800 px-4 py-2">Contacts</a>
+        <aside className="w-64 bg-gray-100 p-4">
+          <nav className="space-y-2">
+            <Link to="/" className="block text-blue-700">Dashboard</Link>
+            <Link to="/inbox" className="block text-blue-700">Inbox</Link>
+            <Link to="/contacts" className="block text-blue-700">Contacts</Link>
           </nav>
         </aside>
 
         {/* Main content */}
-        <main className="flex-1 p-6">
+        <main className="flex-1 bg-white">
           <Routes>
-            <Route path="/" element={<h1 className="text-3xl font-bold">Welcome to ChatKing Dashboard</h1>} />
-            <Route path="/contacts" element={<ContactsPage />} />
+            <Route path="/" element={<Dashboard />} />
+            <Route path="/inbox" element={<Inbox />} />
+            <Route path="/contacts" element={<Contacts />} />
+            {/* Add more routes here */}
           </Routes>
         </main>
       </div>
@@ -30,4 +44,4 @@ function App() {
   );
 }
 
-export default ContactsPage;
+export default App;
