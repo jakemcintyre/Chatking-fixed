@@ -18,9 +18,9 @@ function App() {
   };
 
   return (
-    <div className="flex">
+    <div className="flex h-screen">
       <Sidebar isOpen={true} activePage={activePage} setActivePage={setActivePage} />
-      <main className="flex-1 p-4">
+      <main className="flex-1 p-4 overflow-y-auto">
         {renderPage()}
       </main>
     </div>
