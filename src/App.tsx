@@ -18,14 +18,13 @@ function App() {
   };
 
   return (
-    <div className="flex h-screen">
-      <Sidebar isOpen={true} activePage={activePage} setActivePage={setActivePage} />
-     <main className="flex-1 p-4 overflow-y-auto">
-     <h1>🚀 ChatKing Live Update</h1>
-     <p>This change proves deployment works!</p>
+  <div className="flex h-screen">
+    <Sidebar isOpen={true} activePage={activePage} setActivePage={setActivePage} />
+    <main className="flex-1 p-4 overflow-y-auto">
+      {renderPage()}
     </main>
-    </div>
-  );
+  </div>
+);
 }
 
 export default App;
