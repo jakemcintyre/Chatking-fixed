@@ -64,7 +64,7 @@ export const mockMessages: Message[] = [
     id: '1',
     contactId: '1',
     platform: 'facebook',
-    content: 'Hi there, I'm interested in your services. Can you tell me more about your premium package?',
+    content: "Hi there, I'm interested in your services. Can you tell me more?",
     timestamp: new Date(yesterday.getTime() + 10 * 60 * 60 * 1000),
     status: 'read',
     isOutgoing: false
@@ -100,20 +100,20 @@ export const mockMessages: Message[] = [
     id: '5',
     contactId: '3',
     platform: 'linkedin',
-    content: 'Hello, I'm interested in discussing how your enterprise solutions could work for our company.',
+    content: 'Hi there, Im interested in your services. Can you tell me more?',
     timestamp: new Date(now.getTime() - 15 * 60 * 1000),
     status: 'unread',
     isOutgoing: false
   },
   {
-    id: '6',
-    contactId: '4',
-    platform: 'facebook',
-    content: 'I've reviewed the contract and have a few questions about section 3.2 regarding implementation timelines.',
-    timestamp: new Date(now.getTime() - 4 * 60 * 60 * 1000),
-    status: 'unread',
-    isOutgoing: false
-  },
+  id: '5',
+  contactId: '3',
+  platform: 'linkedin',
+  content: "Hi there, I'm interested in your services. Can you tell me more?",
+  timestamp: new Date(now.getTime() - 15 * 60 * 1000),
+  status: 'unread',
+  isOutgoing: false
+},
   {
     id: '7',
     contactId: '5',
